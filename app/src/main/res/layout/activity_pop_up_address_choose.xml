@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/alamat_tampil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#803838"
+    tools:context=".PopUpAddressChoose">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="22dp"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="1dp"
+            android:src="@drawable/clear" />
+
+        <TextView
+            android:id="@+id/pilihAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="17dp"
+            android:text="Pilih Alamat"
+            android:onClick="launchHomeMenuActivitityActivity"
+            android:textAlignment="viewStart"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:layout_marginTop="90dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/alamatTampil"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            tools:listitem="@layout/layout_pop_up_address_choose_activity" />
+
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnTambahAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="34dp"
+            android:clickable="true"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_add"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+</RelativeLayout>
